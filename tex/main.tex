@@ -16,15 +16,19 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage{imakeidx}
+\usepackage{nicefrac}
+\usepackage{bigints}
 \usepackage{xcolor, color, soul}
 \sethlcolor{red}
 
 \titleformat*{\section}{\normalsize\bfseries}
 
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\bb}{\textbf}
 \newcommand{\ii}{\textit}
+\newcommand{\x}{\text}
 \date{}
 
 \setlength{\abovecaptionskip}{1pt}
@@ -123,7 +127,7 @@
 
 \ii{Внутренняя точка} -- лежит в множестве вместе с окрестностью
 
-\ii{Изолированная точка} -- существует проколотая окрестность, не содержащая точек множества 
+\ii{Изолированная точка} -- существует проколотая окрестность, не содержащая точек множества
 
 \ii{Предельная точка} -- точка, в любой проколотой окрестности которой есть точки из множества или есть последовательность Гейне, принадлежащая множеству
 
@@ -169,8 +173,8 @@
 \end{figure}
 
 {\bfseries\colorbox{lightgray}{Def}} \bb{Повторный предел} -- сначала берём предел по одной переменной, а потом по второй, рассматривая предел по первой как функцию.
-    $$\lim\limits_{y\to 0}\lim\limits_{x\to 0} \left( x+y \sin\frac{1}{x} \right) = \emptyset$$
-    $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right) = 0 $$
+$$\lim\limits_{y\to 0}\lim\limits_{x\to 0} \left( x+y \sin\frac{1}{x} \right) = \emptyset$$
+$$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right) = 0 $$
 
 \newpage
 \begin{figure}[h!]
@@ -269,16 +273,87 @@
 a
 \newpage
 \section{\color{RedViolet}\textbf{Неопределённые интегралы}}
-\begin{enumerate}
-    \item Замена переменной 
-    \item Интегрирование по частям
-    \item Рациональные функции
-    \item Метод Остроградского
-    \item Иррациональности
-    \item Дифференциальный бином
-    \item Подстановки Эйлера
-    \item Тригонометрия
-\end{enumerate}
+\begin{itemize}
+    \item \textbf{Замена переменной}
+          \begin{equation*}
+              \int\frac{dx}{\sqrt{e^x+1}} = \left|
+              \begin{aligned}
+                   & t = e^x-1    \\
+                   & x = \ln(t+1)
+              \end{aligned} \right| = \int\frac{dt}{\sqrt{t}(t+1)} = \left|
+              \begin{aligned}
+                   & u = \sqrt{t} \\
+                   & t = u^2
+              \end{aligned} \right| = \int\frac{2udu}{u(u^2+1)}
+          \end{equation*}
+    \item \textbf{Интегрирование по частям}
+          \begin{equation*}
+              \int u v'dx = uv - \int u' v dx
+          \end{equation*}
+    \item \textbf{Рациональные функции}
+          $$\int\frac{P(x)}{Q(x)}dx $$
+          \begin{enumerate}
+              \item $\deg P \geq \deg Q \Rightarrow$ выделить целую часть
+              \item Разложтить знаменатель на неприводимые множители
+              \item Представить $P/Q$ в виде суммы
+              \item Найти неопределённые коэффициенты
+              \item Проинтегрировать каждое слагаемое
+          \end{enumerate}
+    \item \textbf{Метод Остроградского}
+          $$ \int \frac{P}{Q}dx = \frac{P_1}{Q_1} + \int \frac{P_2}{Q_2}dx$$
+          $Q_2$ произведение всех неприводимых множителей $Q$, $Q_1 = Q/Q_2$
+          $$ \int\frac{x^3+x^2-4x+1}{(x^2+1)^2}dx = \frac{Ax + B}{x^2+1} + \int\frac{Cx + D}{x^2+1} $$
+          Дальше дифференцируем и находим коэффициенты.
+    \item \textbf{Иррациональности}
+          \begin{enumerate}
+              \item $R(\alpha,\beta, \gamma,\ldots) = {P(\alpha, \beta, \gamma, \ldots)}/{Q(\alpha, \beta, \gamma, \ldots)} $
+                    \begin{multline*}
+                        \int R\left(x, \left(\frac{ax + b}{cx+d}\right)^{p_1/q_1}, \left(\frac{ax + b}{cx+ d}\right)^{p_2/1_2}, \ldots \right)dx = \\ = \left|
+                        \begin{aligned}
+                             & t^N = \frac{ax+b}{cx+d}       \\
+                             & N = \x{НОК}(q_1, q_2, \ldots)
+                        \end{aligned} \right| = \ldots
+                    \end{multline*}
+              \item Дифференциальный бином
+                    $$ \int x^m (ax^n+b)^pdx $$
+                    \begin{enumerate}
+                        \item $p$ -- целое $\Rightarrow$ $x = t^N, \; N = \x{НОК}(\x{зн}(m), \x{зн}(n))$
+                        \item $(m+1)/{n}$ -- целое $\Rightarrow$ $ax^n+b = t^s, \; s=\x{зн}(p)$
+                        \item ${(m+1)}/{n}+p$ -- целое $\Rightarrow$ $a + b x^{-n} = t^s, \; s=\x{зн}(p)$
+                        \item В остальных случаях интеграл не берётся.
+                    \end{enumerate}
+              \item Подстановки Эйлера
+                    $$ \int R\left(x, \sqrt{ax^2+bx+c}\right)dx $$
+                    \begin{equation*}
+                        \sqrt{ax^2+bx+c} = \left\{
+                        \begin{aligned}
+                             & \pm \sqrt{a}x \pm t, \; a > 0 \\
+                             & \pm xt \pm \sqrt{c}, \; c > 0 \\
+                             & (x-x_{1,2})t
+                        \end{aligned}
+                        \right.
+                    \end{equation*}
+              \item $P(x, \sqrt{p})/Q(x, \sqrt{p})$
+                    $$ \frac{P(x, \sqrt{p})}{Q(x, \sqrt{p})} = R_1(x) + R_2(x) \frac{1}{\sqrt{p}} $$
+                    $$ \int\frac{\widetilde{p}(x)}{\sqrt{p}}dx = \widetilde{Q}(x)\sqrt{p} + \lambda\int\frac{1}{\sqrt{p}}dx $$
+          \end{enumerate}
+    \item \textbf{Тригонометрия}
+          \begin{enumerate}
+              \item $\int (\sin^nx \cdot \cos^m x ) dx  = |m \x{--нечёт}| = \int (\sin^nx\cdot \cos^{2k}x)d(\sin x)$
+              \item $$\int \frac{P(\sin x, \cos x)}{Q(\sin x, \cos x)} dx, \quad P,Q\x{-- однородные, } \deg Q = \deg P + 2$$
+                    Поделить обе части на $\cos^2x$, прератив в тангенсы.
+              \item $\deg Q - \deg P = 2k \Rightarrow $ домножить на $(\cos^2x + \sin^2 x)$
+              \item Сделать степени чётными, увеличив угол в два раза.
+                    \begin{equation*}
+                        \int \frac{1- \sin x + \cos x}{1+ \sin x - \cos x} dx = \left|
+                        \begin{aligned}
+                             & x = 2t       \\
+                             & u = \tg t    \\
+                             & u = \tg(x/2)
+                        \end{aligned} \right| = \bigintsss{\ddfrac{1 - \frac{2u}{1+u^2} + \frac{1 - u^2}{1 + u^2}}{1 + \ddfrac{2u}{1+u^2} - \frac{1-u^2}{1 + u^2}}\frac{2 du}{1 + u^2}}
+                    \end{equation*}
+          \end{enumerate}
+\end{itemize}
 
 
 
