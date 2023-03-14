@@ -4,7 +4,7 @@
 \usepackage{amsmath}
 \usepackage{subfigure}
 \usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
 \usepackage{indentfirst}
 \usepackage{caption}
 \usepackage{multirow}
@@ -21,7 +21,7 @@
 \usepackage{xcolor, color, soul}
 \sethlcolor{red}
 
-\titleformat*{\section}{\normalsize\bfseries}
+% \titleformat*{\section}{\normalsize\bfseries}
 
 \newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
 \newcommand{\R}{\mathbb{R}}
@@ -40,7 +40,8 @@
 \tableofcontents
 
 \newpage
-\section{\color{RedViolet}\textbf{Предел последовательности точек в n-мерном евклидовом пространстве. Связь между сходимостью последовательности точек и сходимостью последовательностей их координат. Внутренние, предельные, изолированные точки множества. Открытые и замкнутые множества, их свойства. Внутренность, замыкание и граница множества.}}
+\section{Последовательности, множества и точки.}
+% \section{\color{RedViolet}\textbf{Предел последовательности точек в n-мерном евклидовом пространстве. Связь между сходимостью последовательности точек и сходимостью последовательностей их координат. Внутренние, предельные, изолированные точки множества. Открытые и замкнутые множества, их свойства. Внутренность, замыкание и граница множества.}}
 \vspace{-0.5cm}
 \begin{figure}[h!]
     \centering
@@ -59,6 +60,13 @@
 \end{figure}
 \begin{figure}[h!]
     \centering
+    \includegraphics[width=\textwidth]{7.png}
+    \vspace{-1cm}
+\end{figure}
+\newpage
+\subsection{Предел последовательности точек в n-мерном пространстве.}
+\begin{figure}[h!]
+    \centering
     \includegraphics[width=\textwidth]{2.png}
     \vspace{-1cm}
 \end{figure}
@@ -67,17 +75,15 @@
     \fbox{\includegraphics[width=\textwidth]{3.png}}
     \vspace{-1cm}
 \end{figure}
+\newpage
+\subsection{\ii{Связь между сходимостью последовательности точек и сходимостью последовательностей их координат.}}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{4.png}}
     \vspace{-1cm}
 \end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{7.png}
-    \vspace{-1cm}
-\end{figure}
 \newpage
+\subsection{Внутренние, предельные, изолированные точки множества.}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{5.png}}
@@ -96,6 +102,7 @@
 {\bfseries\colorbox{lightgray}{Def}} (эквивалентное) $x^{0}$ -- предельная точка $E$, если $\exists x^{m} \to x^{(0)}, x^{m}\neq x^{(0)}$.
 
 \newpage
+\subsection{Открытые и замкнутые множества.}
 
 \begin{figure}[h!]
     \centering
@@ -117,6 +124,7 @@
     \fbox{\includegraphics[width=\textwidth]{10.png}}
     \vspace{-1cm}
 \end{figure}
+\subsection{Внутренность, замыкание и граница множества.}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{13.png}}
@@ -156,12 +164,14 @@
 \ii{Замыкание} -- объединение множества с его границей.
 
 \newpage\noindent
-\section{\color{RedViolet}\textbf{Предел числовой функции нескольких переменных. Предел функции по множеству. Пределы по направлениям. Непрерывность функции нескольких переменных в точке и по множеству. Непрерывность сложной функции. Свойства функций, непрерывных на компакте — ограниченность, достижимость (точных) нижней и верхней граней, равномерная непрерывность. Теорема о промежуточных значениях функции, непрерывной в области.}}
+%\section{\color{RedViolet}\textbf{Предел числовой функции нескольких переменных. Предел функции по множеству. Пределы по направлениям. Непрерывность функции нескольких переменных в точке и по множеству. Непрерывность сложной функции. Свойства функций, непрерывных на компакте — ограниченность, достижимость (точных) нижней и верхней граней, равномерная непрерывность. Теорема о промежуточных значениях функции, непрерывной в области.}}
+\section{Пределы, непрерывность функций нескольких переменных.}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{14.png}
     \vspace{-1cm}
 \end{figure}
+\subsection{Предел функции нескольких переменных.}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{15.png}}
@@ -173,7 +183,7 @@
 \end{figure}
 
 {\bfseries\colorbox{lightgray}{Def}} \bb{Повторный предел} -- сначала берём предел по одной переменной, а потом по второй, рассматривая предел по первой как функцию.
-$$\lim\limits_{y\to 0}\lim\limits_{x\to 0} \left( x+y \sin\frac{1}{x} \right) = \emptyset$$
+$$\lim\limits_{y\to 0}\lim\limits_{x\to 0} \left( x+y \sin\frac{1}{x} \right) = \emptyset$$title
 $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right) = 0 $$
 
 \newpage
@@ -187,6 +197,8 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \includegraphics[width=\textwidth]{18.png}
     \vspace{-1cm}
 \end{figure}
+\newpage
+\subsection{Предел по направлению}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{19.png}}
@@ -197,18 +209,21 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \includegraphics[width=\textwidth]{20.png}
     \vspace{-1cm}
 \end{figure}
+\newpage
+\subsection{Предел функции по множеству.}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{21.png}}
 \end{figure}
 Например, односторонние пределы функции одной переменной или предел по направлению функции нескольких переменных.
-\newpage
 
 {\bfseries\colorbox{lightgray}{Def}} (Скубачевский) Предел по направлению -- предел по множеству $E$, где $E$ -- луч.
 
 \bb{Утв} $\exists \lim\limits_{x\to x^{(0)}} f(x) \Rightarrow$ в точке $x^{(0)}$ существует предел по всем направлениям, и они равны.
 
 Обратное не верно. Пример: парабола, поднятая вверх на 1 для точки (0,0).
+\newpage
+\subsection{Непрерывность функции нескольких переменных в точке и по множеству.}
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{22.png}}
@@ -216,59 +231,70 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{23.png}
+    \fbox{\includegraphics[width=\textwidth]{29.png}}
     \vspace{-1cm}
 \end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{24.png}
-    \vspace{-1cm}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{25.png}
-    \vspace{-1cm}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{26.png}
-    \vspace{-1cm}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{27.png}
-    \vspace{-1cm}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{23.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{24.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \newpage
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{25.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{26.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{27.png}
+%     \vspace{-1cm}
+% \end{figure}
 \newpage
+\subsection{Непрерывность сложной функции}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{28.png}
     \vspace{-1cm}
 \end{figure}
-\begin{figure}[h!]
-    \centering
-    \fbox{\includegraphics[width=\textwidth]{29.png}}
-    \vspace{-1cm}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{30.png}
-    \vspace{-1cm}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{31.png}
-    \vspace{-1cm}
-\end{figure}
-\newpage
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{32.png}
-    \vspace{-1cm}
-\end{figure}
+% \newpage
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{30.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{31.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \newpage
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{32.png}
+%     \vspace{-1cm}
+% \end{figure}
+
 
 \newpage
-\section{\color{RedViolet}\textbf{Частные производные функции нескольких переменных. Дифференцируемость функции в точке, дифференциал. Необходимые условия дифференцируемости, достаточные условия дифференцируемости функции нескольких переменных. Дифференцируемость сложной функции. Инвариантность формы дифференциала относительно замены переменных. Градиент и производная по направлению.}}
+\subsection{Свойства функций, непрерывных на компакте -- ограниченность, достижимость (точных) нижней и верхней граней, равномерная непрерывность.}
+
+\newpage
+\subsection{Теорема о промежуточных значениях функции, непрерывной в области.}
+
+\newpage
+\section{Производные функций нескольких переменных.}
+%\section{\color{RedViolet}\textbf{Частные производные функции нескольких переменных. Дифференцируемость функции в точке, дифференциал. Необходимые условия дифференцируемости, достаточные условия дифференцируемости функции нескольких переменных. Дифференцируемость сложной функции. Инвариантность формы дифференциала относительно замены переменных. Градиент и производная по направлению.}}
 \vspace{-0.5cm}
 \begin{figure}[h!]
     \centering
@@ -322,7 +348,7 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
 
 
 \newpage
-\section{\color{RedViolet}\textbf{Неопределённые интегралы}}
+\section{Неопределённые интегралы}
 \begin{itemize}
     \item \textbf{Замена переменной}
           \begin{equation*}
