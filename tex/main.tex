@@ -1,7 +1,9 @@
 \documentclass{article}
 \usepackage[russian]{babel}
 \usepackage[a5paper,top=0.5cm,bottom=2cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{subfigure}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
@@ -19,6 +21,7 @@
 \usepackage{nicefrac}
 \usepackage{bigints}
 \usepackage{xcolor, color, soul}
+
 \sethlcolor{red}
 
 % \titleformat*{\section}{\normalsize\bfseries}
@@ -234,6 +237,12 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \fbox{\includegraphics[width=\textwidth]{29.png}}
     \vspace{-1cm}
 \end{figure}
+
+\paragraph*{Пример:} Исследовать $f(x,y)$ на непрерывность в точке (0,0).
+$$f(x,y) = \frac{2xy}{\sqrt{x^2+y^2}}$$
+По теореме о трёх милиционерах:
+$$0 \leq |f(x,y)| = \left| \frac{2xy}{\sqrt{x^2 + y^2}} \right| = \left| \frac{2 \rho^2 \sin\varphi \cos\varphi}{\rho} \right| \leq 2\rho \to 0$$
+\ii{Второй милиционер не должен зависеть от $\varphi$!}
 % \begin{figure}[h!]
 %     \centering
 %     \includegraphics[width=\textwidth]{23.png}
@@ -293,8 +302,40 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
 \subsection{Теорема о промежуточных значениях функции, непрерывной в области.}
 
 \newpage
+\subsection{Не вошло в программу экзамена.}
+\subsubsection{Повторный предел}
+\bb{Опр} $f: \Pi_\varepsilon(x_0, y_0) \to \R $. $\Pi$ -- Декартово произведение окрестностей $x_0$ и $y_0$. \\ 
+Пусть $\forall y \in \mathring{U}(y_0)\hookrightarrow \exists \lim\limits_{x\to x_0}f(x,y) = \varphi(y) \in \R$\\
+Пусть $\exists \lim\limits_{y\to y_0} \varphi(y) = u_0 \in \overline{\R}$
+
+Тогда говорят, что существует повторный предел:
+$$\lim\limits_{y\to y_0}\lim\limits_{x\to x_0} f(x,y) = u_0$$.
+
+
+\newpage
+\subsection{Замечания и примеры.}
+\subsubsection{Достаточное условие существования двойного предела.}
+\paragraph*{Лемма}$$\exists \; F(\rho) : |\hat{f}(\rho,\varphi) - u_0| \leq F(\rho) \; \wedge  \; \lim\limits_{\rho\to0}F(\rho)=0 \Rightarrow \exists \lim\limits_{(x,y)\to(0,0)}f(x,y)=u_0$$
+\begin{proof}
+$$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \hookrightarrow F(\rho) < \varepsilon  \Rightarrow |\hat{f}(\rho,\varphi) - u_0| < \varepsilon \Leftrightarrow |f(x,y) - u_0| < \varepsilon$$
+при $\rho((x,y), (0,0) )\in(0, \delta)$.
+\end{proof}
+\begin{equation*}
+    f(x,y) = \left\{
+    \begin{aligned}
+         & \frac{x^2 y}{x^4 + y^2}, \; (x,y) \neq (0,0) \\
+         & 0, \; (x,y) = (0,0)
+    \end{aligned}
+    \right.
+\end{equation*}
+Если пытаться подставлять предел по направлению, получается сложно (нужно придумать ограничение сверху), значит скорее всего предела нет.
+Можно взять направления $y = x$ и $y = x^2$, получатся разные пределы.
+
+\newpage
+
 \section{Производные функций нескольких переменных.}
 %\section{\color{RedViolet}\textbf{Частные производные функции нескольких переменных. Дифференцируемость функции в точке, дифференциал. Необходимые условия дифференцируемости, достаточные условия дифференцируемости функции нескольких переменных. Дифференцируемость сложной функции. Инвариантность формы дифференциала относительно замены переменных. Градиент и производная по направлению.}}
+\subsection{Дифференцируемость функции в точке, дифференциал.}
 \vspace{-0.5cm}
 \begin{figure}[h!]
     \centering
@@ -307,7 +348,8 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \includegraphics[width=\textwidth]{34.png}
     \vspace{-1cm}
 \end{figure}
-
+\newpage
+\subsection{Частные производные функции нескольких переменных.}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{40.png}
@@ -321,7 +363,7 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
 \end{figure}
 
 \newpage
-
+\subsection{Необходимые условия дифференцируемости, достаточные условия дифференцируемости функции нескольких переменных.}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{36.png}
@@ -346,6 +388,75 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \vspace{-1cm}
 \end{figure}
 
+\newpage
+\subsection{Дифференцируемость сложной функции.}
+
+\newpage
+\subsection{Инвариантность формы дифференциала относительно заменных.}
+
+\newpage
+\subsection{Градиент и производная по направлению.}
+
+\newpage
+\subsection{Замечания и примеры}
+\subsubsection{Треугольник диф, сущ чп, непр}
+\begin{enumerate}
+    \item $f$ -- дифференцируема $\Rightarrow$ $f$ имеет частные производные.
+    \item $f$ -- дифференцируема $\Rightarrow$ $f$ непрерывна.
+\end{enumerate}
+\ii{Других логических соотношений между этими тремя фактами нет.}
+\paragraph*{Контрпример 1}
+\begin{equation*}
+    f(x,y) = \left\{
+    \begin{aligned}
+         & \frac{2xy}{\sqrt{x^2 + y^2}}, \; (x,y) \neq (0,0) \\
+         & 0, \; (x,y) = (0,0)
+    \end{aligned}
+    \right.
+\end{equation*}
+У неё есть частные производные и она непрерывна.
+
+Из определения дифференцируемости:
+$$\frac{f(x,y)}{\sqrt{x^2+y^2}} = \frac{2xy}{x^2 + y^2} = \sin{2\varphi} \nrightarrow 0, \rho \rightarrow 0; $$
+Значит не дифференцируема.
+
+\newpage
+\section{Частные производные высших порядков, формула Тейлора.}
+\subsection{Частные производные высших порядков.}
+
+\newpage
+\subsection{Независимость смешанной частной производной от порядка дифференцирования.}
+
+\newpage
+\subsection{Дифференциалы высших порядков.}
+
+\newpage
+\subsection{Формула Тейлора для функций нескольких переменных с остаточным членом в формах Лагранжа и Пеано.}
+
+\newpage
+\section{Жордан?}
+
+\newpage
+\section{Лебег?}
+
+\newpage
+\section{Определённые интегралы.}
+\subsection{Свойства сумм Дарбу}
+
+\newpage
+\subsection{Интегрируемость непрерывной функции, монотонной функции, ограниченной функции с конечным числом точек разрыва.}
+
+\newpage
+\subsection{Аддитивность интеграла по отрезкам, линейность интеграла, интегрируемость произведения функций, интегрируемость модуля интегрируемой функции, интегрируемость неравенств, теорема о среднем.}
+
+\newpage
+\subsection{Свойства интеграла с переменным верхним пределом -- непрерывность, дифференцируемость.}
+
+\newpage
+\subsection{Формула Ньютона-Лейбница}
+
+\newpage
+\subsection{Замена переменных и интегрирование по частям в определённом интеграле.}
 
 \newpage
 \section{Неопределённые интегралы}
