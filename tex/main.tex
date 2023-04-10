@@ -9,6 +9,7 @@
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
 \usepackage{indentfirst}
 \usepackage{caption}
+\usepackage{multicol}
 \usepackage{multirow}
 \usepackage{hhline}
 \usepackage{wrapfig}
@@ -20,6 +21,7 @@
 \usepackage{imakeidx}
 \usepackage{nicefrac}
 \usepackage{bigints}
+\usepackage{esvect}
 \usepackage{xcolor, color, soul}
 
 \sethlcolor{red}
@@ -185,21 +187,22 @@
     \fbox{\includegraphics[width=\textwidth]{16.png}}
 \end{figure}
 
-{\bfseries\colorbox{lightgray}{Def}} \bb{Повторный предел} -- сначала берём предел по одной переменной, а потом по второй, рассматривая предел по первой как функцию.
-$$\lim\limits_{y\to 0}\lim\limits_{x\to 0} \left( x+y \sin\frac{1}{x} \right) = \emptyset$$title
-$$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right) = 0 $$
+% {\bfseries\colorbox{lightgray}{Def}} \bb{Повторный предел} -- сначала берём предел по одной переменной, а потом по второй, рассматривая предел по первой как функцию.
+% $$\lim\limits_{y\to 0}\lim\limits_{x\to 0} \left( x+y \sin\frac{1}{x} \right) = \emptyset$$title
+% $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right) = 0 $$
 
-\newpage
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{17.png}
-    \vspace{-1cm}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{18.png}
-    \vspace{-1cm}
-\end{figure}
+% \newpage
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{17.png}
+%     \vspace{-1cm}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{18.png}
+%     \vspace{-1cm}
+% \end{figure}
+
 \newpage
 \subsection{Предел по направлению}
 \begin{figure}[h!]
@@ -212,6 +215,13 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \includegraphics[width=\textwidth]{20.png}
     \vspace{-1cm}
 \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{41.png}
+    \vspace{-1cm}
+\end{figure}
+\paragraph*{Лемма} $\exists \lim\limits_{x\to x^0}f(x) = y^0 \Rightarrow \forall \mathbf{e} \; \exists \lim\limits_{\rho \to 0}f_{\mathbf{e}}(\rho)=y_0$
+
 \newpage
 \subsection{Предел функции по множеству.}
 \begin{figure}[h!]
@@ -237,6 +247,32 @@ $$\lim\limits_{x\to 0}\lim\limits_{y \to 0}\left( x + y \sin \frac{1}{x} \right)
     \fbox{\includegraphics[width=\textwidth]{29.png}}
     \vspace{-1cm}
 \end{figure}
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{42.png}}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{43.png}}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{44.png}}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{45.png}}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{46.png}}
+    \vspace{-1cm}
+\end{figure}
+
 
 \paragraph*{Пример:} Исследовать $f(x,y)$ на непрерывность в точке (0,0).
 $$f(x,y) = \frac{2xy}{\sqrt{x^2+y^2}}$$
@@ -297,28 +333,62 @@ $$0 \leq |f(x,y)| = \left| \frac{2xy}{\sqrt{x^2 + y^2}} \right| = \left| \frac{2
 
 \newpage
 \subsection{Свойства функций, непрерывных на компакте -- ограниченность, достижимость (точных) нижней и верхней граней, равномерная непрерывность.}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{47.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{48.png}
+\end{figure}
+\underline{\bb{Опр}}
+$$f: \R^n \supset X \to \R^m $$
+$f$ равномерно непрерывна на $X$, если
+$$ \forall \varepsilon > 0 \; \exists \delta > 0 : \forall x', x'' \in X : \rho(x',x'') < \delta \hookrightarrow \rho(f(x'). f(x'')) < \varepsilon $$
 \newpage
 \subsection{Теорема о промежуточных значениях функции, непрерывной в области.}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{49.png}
+    \vspace{-1cm}
+\end{figure}
 \newpage
 \subsection{Не вошло в программу экзамена.}
 \subsubsection{Повторный предел}
-\bb{Опр} $f: \Pi_\varepsilon(x_0, y_0) \to \R $. $\Pi$ -- Декартово произведение окрестностей $x_0$ и $y_0$. \\ 
+\bb{Опр} $f: \Pi_\varepsilon(x_0, y_0) \to \R $. $\Pi$ -- Декартово произведение окрестностей $x_0$ и $y_0$. \\
 Пусть $\forall y \in \mathring{U}(y_0)\hookrightarrow \exists \lim\limits_{x\to x_0}f(x,y) = \varphi(y) \in \R$\\
 Пусть $\exists \lim\limits_{y\to y_0} \varphi(y) = u_0 \in \overline{\R}$
 
 Тогда говорят, что существует повторный предел:
 $$\lim\limits_{y\to y_0}\lim\limits_{x\to x_0} f(x,y) = u_0$$.
+\subsubsection{Отображения, предел суперпозиции отображений}
+\begin{enumerate}
+    \item $\exists \lim\limits_{x\to x_0}f(x) = y^0$
+    \item $\exists \lim\limits_{y\to y_0}g(y) = u^0$
+    \item $\exists \mathring{U}_{\delta_0}(x^0): \forall x \in \mathring{U}_{\delta_0}\hookrightarrow f(x) \in Def(g) \land f(x) \neq y_0$
+\end{enumerate}
+Тогда $\exists \lim\limits_{x\to x_0}(g\circ f)(x) = \lim\limits_{y\to y_0}g(y) = u_0$
 
-
+\subsubsection{Покоординатный критерий существования предела отображения}
+Предел, равный $a$ существует тогда и только тогда, когда пределы функции по каждой координате равны координатам $a$.
+\subsubsection{Если существует предел, то пределы по всем направлениям равны.}
+Не критерий.
+\subsubsection{Покоординатный критерий непрерывности в точке}
+$f$ непрерывна в точке тогда и только тогда, когда $f_i$ покоординатные функции имеют пределом $f(x)_i$.
+\subsubsection{Необходимое условие непрерывности}
+Если определить для каждой координаты функцию, где все остальные координаты будут зафиксированы и равны $x^0_k$, то если исходная функция непрерывна в точке, то такие функции тоже непрерывны.
+В обратную сторону не работает:
+$$ \frac{x^2 y}{x^4 + y^2}$$
+\subsubsection{О непрерывности арифметических операций}
+$f$ и $g$ непрерывны, тогда непрерывна их сумма и произведение.
 \newpage
 \subsection{Замечания и примеры.}
 \subsubsection{Достаточное условие существования двойного предела.}
 \paragraph*{Лемма}$$\exists \; F(\rho) : |\hat{f}(\rho,\varphi) - u_0| \leq F(\rho) \; \wedge  \; \lim\limits_{\rho\to0}F(\rho)=0 \Rightarrow \exists \lim\limits_{(x,y)\to(0,0)}f(x,y)=u_0$$
 \begin{proof}
-$$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \hookrightarrow F(\rho) < \varepsilon  \Rightarrow |\hat{f}(\rho,\varphi) - u_0| < \varepsilon \Leftrightarrow |f(x,y) - u_0| < \varepsilon$$
-при $\rho((x,y), (0,0) )\in(0, \delta)$.
+    $$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \hookrightarrow F(\rho) < \varepsilon  \Rightarrow |\hat{f}(\rho,\varphi) - u_0| < \varepsilon \Leftrightarrow |f(x,y) - u_0| < \varepsilon$$
+    при $\rho((x,y), (0,0) )\in(0, \delta)$.
 \end{proof}
 \begin{equation*}
     f(x,y) = \left\{
@@ -330,7 +400,9 @@ $$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \ho
 \end{equation*}
 Если пытаться подставлять предел по направлению, получается сложно (нужно придумать ограничение сверху), значит скорее всего предела нет.
 Можно взять направления $y = x$ и $y = x^2$, получатся разные пределы.
-
+\subsubsection{Теорема про открытый прообраз}
+$$ f: \R^n \supset X \to \R^m $$
+$X$ -- открытое подмножество, то $f$ непрерывна на $X$ $\Leftrightarrow$ $\forall$ открытого $O \subset \R^m$ полный прообраз $f^{-1}(O)$ открыт в $R^n$
 \newpage
 
 \section{Производные функций нескольких переменных.}
@@ -348,6 +420,12 @@ $$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \ho
     \includegraphics[width=\textwidth]{34.png}
     \vspace{-1cm}
 \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{50.png}
+    \vspace{-1cm}
+\end{figure}
+
 \newpage
 \subsection{Частные производные функции нескольких переменных.}
 \begin{figure}[h!]
@@ -362,6 +440,8 @@ $$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \ho
     \vspace{-1cm}
 \end{figure}
 
+\paragraph*{Лемма} Cуществует частная производная $\partial f(x^0)/\partial x_i$ $\Leftrightarrow$ $\exists \partial f(x^0)/\partial \mathbf{e}_i, \partial f(x^0)/\partial \mathbf{e}_i = \partial f(x^0)/\partial x_i$ где $\mathbf{e}_i$ -- базисный вектор.
+
 \newpage
 \subsection{Необходимые условия дифференцируемости, достаточные условия дифференцируемости функции нескольких переменных.}
 \begin{figure}[h!]
@@ -375,6 +455,7 @@ $$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \ho
     \includegraphics[width=\textwidth]{37.png}
     \vspace{-1cm}
 \end{figure}
+\paragraph*{Пример} Парабола, поднятая вверх на 1, в точке (0,0) равна 0. Тогда производная по любому направлению равна нулю, но функция не непрерывна, значит не дифференцируема (по первому необходимому условию).
 
 \begin{figure}[h!]
     \centering
@@ -396,6 +477,26 @@ $$ \forall \varepsilon > 0 \exists \delta > 0; \forall \rho \in (0, \delta ) \ho
 
 \newpage
 \subsection{Градиент и производная по направлению.}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{51.png}
+    \vspace{-1cm}
+\end{figure}
+
+\newpage
+\subsection{Не вошло в программу экзамена}
+\subsubsection{Геометрический смысл градиента и частных производных}
+\bb{Опр} $N$ -- ненулевой вектор в $V^p$. Множество точек $\R^p$, которое задаётся линейным уравнением $(N, x-x^0) = 0$ называется гиперплосколстью, проходящей через $x^0$ с вектором нормали $N$. Размерность гиперплоскости равна $p-1$.
+\bb{Опр} Пусть $f$ дифференцируема в точке $x^0$. Гиперплоскость в пространстве $\R^{n+1}$, проходящая через точку $f(x^0)$ с вектором номрали $N = (gradf(x_0), - 1)$ называется касательной плоскостью к графику функции $f$ в точке $A(x^0, f(x^0))$
+\paragraph*{Уравнение касательной плоскости}
+$$ y = f(x^0) + (\x{grad} \, f(x^0), x-x^0) $$
+\bb{Th} О касательной плоскости к графику.
+\begin{enumerate}
+    \item Касательная плоскоость -- единственная, которая проходит через точку касания и отличается от графика на величину бесконечно малую более высокого порядка, чем первый.
+    \item Вектор $\x{grad}\, f$ если он отличен от нулевого, показывает направление максимального роста $f$, а $-\x{grad} \, f$ -- максимального убывания $f$
+\end{enumerate}
+\bb{Опр} Поверхностью уровня $c \in \R$ функции $f$ называется полный прообраз $f^{-1}(c) = \{ f(x) = c \}$. В типичной ситуации поверхность уровня -- это гипреповеръность рахмерности $n-1$.
+\paragraph*{Пример} $f(x_1, x_2, x_3) = x_1^2 + x_2^2 + x_3^2$. Поверхнсть отрицательного уровня -- пустое множество, поврехность уровня 0 = $O(0,0,0)$, поверхность уровня $c>0$ -- сфера $x_1^2 + x_2^2+ x_3^2 = \sqrt{c}$.
 
 \newpage
 \subsection{Замечания и примеры}
@@ -441,13 +542,95 @@ $$\frac{f(x,y)}{\sqrt{x^2+y^2}} = \frac{2xy}{x^2 + y^2} = \sin{2\varphi} \nright
 
 \newpage
 \section{Определённые интегралы.}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{52.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{53.png}
+    \vspace{-1cm}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{56.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{59.png}
+    \vspace{-1cm}
+\end{figure}
+Ограниченная функция не всегда интегрируема, пример -- функция Дирихле. Нижний интеграл не будет равен верхнему.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{61.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{62.png}
+    \vspace{-1cm}
+\end{figure}
+\newpage
 \subsection{Свойства сумм Дарбу}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{54.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{55.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{57.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{58.png}
+    \vspace{-1cm}
+\end{figure}
 \newpage
 \subsection{Интегрируемость непрерывной функции, монотонной функции, ограниченной функции с конечным числом точек разрыва.}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{60.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{67.png}
+    \vspace{-1cm}
+\end{figure}
 \newpage
 \subsection{Аддитивность интеграла по отрезкам, линейность интеграла, интегрируемость произведения функций, интегрируемость модуля интегрируемой функции, интегрируемость неравенств, теорема о среднем.}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{65.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{66.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{68.png}
+    \vspace{-1cm}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{69.png}
+    \vspace{-1cm}
+\end{figure}
+
 
 \newpage
 \subsection{Свойства интеграла с переменным верхним пределом -- непрерывность, дифференцируемость.}
@@ -457,6 +640,24 @@ $$\frac{f(x,y)}{\sqrt{x^2+y^2}} = \frac{2xy}{x^2 + y^2} = \sin{2\varphi} \nright
 
 \newpage
 \subsection{Замена переменных и интегрирование по частям в определённом интеграле.}
+
+\newpage
+\subsection{Не вошло в программу экзамена}
+\subsubsection{Необходимое условие существования интеграла Римана}
+\vspace{-0.5cm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{63.png}
+    \vspace{-1cm}
+\end{figure}
+\subsubsection{Эквивалентность Дарбу и Римана}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{64.png}
+    \vspace{-1cm}
+\end{figure}
+
+
 
 \newpage
 \section{Неопределённые интегралы}
@@ -541,6 +742,83 @@ $$\frac{f(x,y)}{\sqrt{x^2+y^2}} = \frac{2xy}{x^2 + y^2} = \sin{2\varphi} \nright
                     \end{equation*}
           \end{enumerate}
 \end{itemize}
+
+\newpage
+\section{Несобственные интегралы}
+$$ \lim\limits_{\varepsilon \to 0+}\int\limits_{a+\varepsilon}^b f(x) dx = \int\limits_a^bf(x)dx $$
+$\exists$ конечный $\Rightarrow$ сходится. В обратном случае расходится.
+\paragraph*{Условие сходимости по Коши}
+$$\forall \varepsilon > 0 \; \exists c < b: \forall c_1, c_2 \in(c,b) \hookrightarrow \left| \int\limits_{c_1}^{c_2}f(x)dx \right| < \varepsilon$$
+$$\exists \varepsilon > 0 \; \forall c < b: \exists c_1, c_2 \in(c,b) : \left| \int\limits_{c_1}^{c_2}f(x)dx \right| \geq \varepsilon$$
+\subsection{Знакопостоянная функция}
+\paragraph*{Th} \textit{(Первый признак сравнения)} Пусть $f$ и $g$ интегрируемы на $\forall [a,b']\subset [a,b)$. Если $0 \leq f\leq g$ на $ [a,b) $
+\begin{itemize}
+    \item и $\int_a^b g(x)dx $ сходится, то $\int_a^b f(x)dx $ тоже сходится.
+    \item $\int_a^b f(x)dx $ расходится $\Rightarrow$ $\int_a^b g(x)dx $ расходится.
+\end{itemize}
+
+
+\paragraph*{Th} \textit{(Второй признак сравнения)} Пусть $f$ и $g$ интегрируемы на $\forall [a,b']\subset [a,b)$. Если $ \lim\limits_{x\to b-0}{f(x)}/{g(x)} = k \in \R \neq 0$ то либо оба сходятся, либо оба расходятся.
+
+В этом случае пишут $\int\limits_a^b f(x)dx \mathop{\sim}\limits^{\mathrm{\x{сх}}}\int\limits_a^bg(x) dx$
+\subsection{Знакопеременная функция}
+\paragraph*{Th} Если $\int_a^b |f(x)|dx$ сходится, то $\int_a^b f(x)dx $ сходится и $\int_a^b f(x)dx $ называется абсолютно сходящейся ($f$ абсолютно интегрируема).
+\paragraph*{Th} Если $\int_a^b |f(x)|dx $ расходится, а $\int_a^b f(x)dx $ сходится, то $\int_a^b f(x) dx $ называется условно сходящейся ($f$ условно интегрируема). Если $\int_a^b f(x)dx $ расходится, то всё.
+\newpage
+\paragraph*{Th} $\int_a^bf(x)g(x)dx$ сходится, если:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|ll|}
+        \hline
+        \multicolumn{1}{|l|}{Дирихле}                                                   & Абель                                      \\ \hline
+        \multicolumn{2}{|l|}{$f$ непрерывна, $g$ непрерывно дифференцируема и монотонна.}                                            \\ \hline
+        \multicolumn{1}{|l|}{F(x) ограничена на $[a,b)$, $g(x)\xrightarrow{x\to  b} 0$} & $F \xrightarrow{x\to b} C$, $g$ ограничена \\ \hline
+    \end{tabular}
+\end{table}
+\paragraph*{Выделение главной части} $f(x) = g(x) + R(x)$, $R(x)$ абсолютно интегрируема. Тогда $\int_a^b f(x)dx $ и $\int_a^bg(x)dx$:
+\begin{itemize}
+    \item Либо оба расходятся
+    \item Либо оба сходятся условно
+    \item Либо оба сходятся абсолютно
+\end{itemize}
+\paragraph*{Алгоритм}
+\begin{enumerate}
+    \item Абсолютная сходимость (сравнение, выделение главной части)
+    \item Условная сходимость
+          \begin{enumerate}
+              \item $ \int f(x)dx $ сходится (Дирихле, Абель, главная часть)
+              \item $ \int |f(x)|dx $ расходится (оценка, главная часть)
+          \end{enumerate}
+    \item Расходимость $ \int f(x) dx  $ (критерий Коши)
+\end{enumerate}
+\subsection{Шаблонные интегралы}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\int\limits_1^{+\infty}x^\alpha dx$ сходится $\Leftrightarrow \alpha < -1 $
+    \item $\int\limits_1^{+\infty}1/x^\alpha dx$ сходится $\Leftrightarrow \alpha  > 1$
+    \item $ \int\limits_0^1 1/x^\alpha dx $ сходится $\Leftrightarrow \alpha  < 1$
+    \item $\int\limits_0^1 x^\alpha dx $ сходится $\Leftrightarrow \alpha > -1 $
+    \item $\int\limits_2^{+\infty}x^\alpha \ln^\beta x dx$ Сходится, если: \\
+    1. $ \alpha < -1 $ 2. $ \alpha = -1,\; \beta < -1 $
+\end{enumerate}
+\end{multicols}
+$|\sin x|\geq \frac{2}{\pi}|x|$
+
+\subsection{Примеры}
+Исследовать на сходимость $\forall \alpha, \beta$ $\int\limits_2^{+\infty}x^\alpha \ln^\beta x dx$
+\begin{enumerate}
+    \item $\alpha < -1 $
+            $$x^\alpha = x^{\frac{\alpha +1}{2}}\cdot x^\frac{\alpha - 1}{2}  $$
+    Заметим, что $x^\frac{\alpha + 1}{2} \ln^\beta x \xrightarrow[x\to+\infty]{\alpha > -1} 0 \Rightarrow $ ограничена $\Rightarrow \exists C: x^\frac{\alpha + 1}{2} \leq C$ \
+    $$ \int\limits_2^{+\infty} x^\alpha \ln^\beta x dx = \int\limits_2^{+\infty}x^\frac{\alpha - 1}{2} \cdot x^\frac{\alpha + 1}{2}\ln^\beta x dx \leq C\int\limits_2^{+\infty} x^\frac{\alpha -1}{2}dx$$
+    Шаблонный, сходится тогда и только тогда, когда $\alpha < -1$
+    \item $\alpha = -1$
+    $$ \int\limits_2^{+\infty}\frac{\ln^\beta x}{x}dx = \int\limits_2^{+\infty}\ln^\beta x d(\ln x) =|\ln x = t| = \int\limits_{\ln 2}^{+\infty} t^\beta dt$$
+    Сходистя, когда $\beta < -1$
+    \item $\alpha > -1 $
+    $$ \int\limits_2^{+\infty}x^\alpha \ln^\beta x dx = \int\limits_2^{+\infty} x^\frac{\alpha -1}{2}\cdot x^\frac{\alpha +1}{2}\ln^\beta x dx \geq C\int\limits_2^{+\infty} x^\frac{\alpha -1}{2}dx $$
+    Расходится при $\alpha \geq -1$ $\Rightarrow$ Исходный расохдится при $\alpha > -1$ по признаку сравнения.
+\end{enumerate}
 
 
 
