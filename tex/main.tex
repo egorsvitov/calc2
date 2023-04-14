@@ -744,6 +744,47 @@ $$\frac{f(x,y)}{\sqrt{x^2+y^2}} = \frac{2xy}{x^2 + y^2} = \sin{2\varphi} \nright
 \end{itemize}
 
 \newpage
+\section{Определённые интегралы}
+Интегральная сумма Римана:
+$$ \sigma(f,\xi,P) = \sum\limits_{i=1}^{n}f(\xi_i)\Delta x_i $$
+$$ \exists \lim\limits_{|P|\to 0} \sigma(f,\xi, P) \Rightarrow f \x{ интегрируема на отрезке по Риману}$$
+
+Суммы Дарбу:
+$$ M_i = \sup\limits_{[x_{i-1},x_i]} f \qquad m_i = \inf\limits_{[x_{i-1},x_i]} f $$
+$$ S^* = \sum M_i\Delta x_i \; \qquad s_* = \sum m_i \Delta x_i $$
+$$ \lim\limits_{|P|\to 0}(S^* - s_*) = 0 $$
+
+\paragraph*{Th1} Если функция непрерывна на отрезке, то она интегрируема на нем
+\paragraph*{Th2} Если функция интегрируема на отрезке, то она интегрируема на подотрезках
+\paragraph*{Th3} Если функция интегрируема на отрезке, то интеграл от первой границы до $x$ -- первообразная для функции на этом отрезке.
+
+$$ \int\limits_a^b u v' dx = uv|_a^b - \int_a^b u'v dx $$
+
+\paragraph*{Th} Пусть $\varphi(t) : \varphi(\alpha ) = a, \; \varphi(\beta) = b, \; \varphi([\alpha, \beta])=[a,b]$. Тогда:
+$$ \int\limits_a^b f(x) dx = \int\limits_\alpha^\beta f(\varphi(t))\varphi' dt $$
+
+\paragraph*{Th} Пусть $f(x)$ и $g(x)$ интегрируемы на $[a.b]$ $f(x)$ непренывна на $[a,b]$ $\forall x \; g(x) \geq 0$ Тогда $\exists \xi \in [a,b]:$
+$$ \int\limits_a^b f(x) g(x) dx = f(\xi) \int\limits_a^b g(x)dx   $$
+\newpage
+\paragraph*{Площадь под графиком параметрически заданной функции}
+$$ S = \int\limits_\alpha^\beta y x'dt $$
+\paragraph*{Площадь при полярных координатах}
+$$ S = \frac{1}{2}\int\limits_\alpha^\beta r^2(\varphi) d\varphi $$
+\paragraph*{Длина дуги кривой}
+$$ l = \int\limits_a^b \sqrt{(f'(x))^2 + 1} dx $$
+$$ l = \int \limits_a^b \sqrt{(x'(t))^2+(y'(t))^2} dt$$
+$$ l = \int\limits_{\varphi_1}^{\varphi_2}\sqrt{(r')^2 + r^2} d \varphi$$
+\paragraph*{Площадь поверхностей тел вращения}
+$$ dS = 2\pi R dl = 2\pi x\sqrt{1 + (y')^2}dx =  2\pi y\sqrt{1 + (x')^2}dy =  2\pi x(t)\sqrt{(x')^2 + (y')^2}dt $$
+\newpage
+\section{Криволинейные интегралы}
+\paragraph*{I рода}
+$$\int\limits_\Gamma f(x,y,z)dS = \int\limits_{t_1}^{t_2}f(x(t),y(t), z(t))\sqrt{(x')^2 + (y')^2 + (z')^2}dt$$
+\paragraph*{II рода}
+$$ F = (P, Q ,R) $$
+$$ \int\limits_\Gamma (P dx, Q dy, R dz) $$
+
+\newpage
 \section{Несобственные интегралы}
 $$ \lim\limits_{\varepsilon \to 0+}\int\limits_{a+\varepsilon}^b f(x) dx = \int\limits_a^bf(x)dx $$
 $\exists$ конечный $\Rightarrow$ сходится. В обратном случае расходится.
